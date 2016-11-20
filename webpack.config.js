@@ -11,6 +11,7 @@ module.exports = {
       Nav: 'app/components/nav.jsx',
       Weather: 'app/components/weather.jsx',
       About: 'app/components/about.jsx',
+      Favorites: 'app/components/favorites.jsx',
     },
     extensions: ['', '.js', '.jsx']
   },

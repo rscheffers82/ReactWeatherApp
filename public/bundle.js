@@ -58,6 +58,7 @@
 	var Main = __webpack_require__(216);
 	var Weather = __webpack_require__(218);
 	var About = __webpack_require__(219);
+	var Favorites = __webpack_require__(220);
 
 	ReactDOM.render(React.createElement(
 	  Router,
@@ -66,6 +67,7 @@
 	    Route,
 	    { path: '/', component: Main },
 	    React.createElement(Route, { path: 'about', component: About }),
+	    React.createElement(Route, { path: 'favorites', component: Favorites }),
 	    React.createElement(IndexRoute, { component: Weather })
 	  )
 	), document.getElementById('app'));
@@ -24905,6 +24907,11 @@
 	        Link,
 	        { to: '/about' },
 	        'About'
+	      ),
+	      React.createElement(
+	        Link,
+	        { to: '/favorites' },
+	        'Favorites'
 	      )
 	    );
 	  }
@@ -24955,6 +24962,28 @@
 	});
 
 	module.exports = About;
+
+/***/ },
+/* 220 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var Favorites = React.createClass({
+	  displayName: 'Favorites',
+
+	  render: function render() {
+	    return React.createElement(
+	      'h2',
+	      null,
+	      'Favorite places'
+	    );
+	  }
+	});
+
+	module.exports = Favorites;
 
 /***/ }
 /******/ ]);

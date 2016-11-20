@@ -8,6 +8,7 @@ var Nav = React.createClass({
         <h2>Nav...</h2>
         <Link to="/">Get Weather</Link>
         <Link to="/about">About</Link>
+        <Link to="/favorites">Favorites</Link>
       </div>
     );
   }
