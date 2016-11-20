@@ -66,9 +66,13 @@
 	  React.createElement(
 	    Route,
 	    { path: '/', component: Main },
+	    '                    // serup a route container',
 	    React.createElement(Route, { path: 'about', component: About }),
+	    '             // specify an about page',
 	    React.createElement(Route, { path: 'favorites', component: Favorites }),
-	    React.createElement(IndexRoute, { component: Weather })
+	    '     // specify a favorites page',
+	    React.createElement(IndexRoute, { component: Weather }),
+	    '                   // if none of the above can be found load Weather page (default page)'
 	  )
 	), document.getElementById('app'));
 
@@ -24884,7 +24888,8 @@
 	var React = __webpack_require__(1);
 
 	var _require = __webpack_require__(159),
-	    Link = _require.Link;
+	    Link = _require.Link,
+	    IndexLink = _require.IndexLink;
 
 	var Nav = React.createClass({
 	  displayName: 'Nav',
@@ -24899,18 +24904,18 @@
 	        'Nav...'
 	      ),
 	      React.createElement(
-	        Link,
-	        { to: '/' },
+	        IndexLink,
+	        { to: '/', activeClassName: 'active', activeStyle: ({ fontWeight: 'bold' }, { padding: '0px 5px' }) },
 	        'Get Weather'
 	      ),
 	      React.createElement(
 	        Link,
-	        { to: '/about' },
+	        { to: '/about', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
 	        'About'
 	      ),
 	      React.createElement(
 	        Link,
-	        { to: '/favorites' },
+	        { to: '/favorites', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
 	        'Favorites'
 	      )
 	    );
