@@ -9,7 +9,7 @@ module.exports = {
 
     return axios.get(requestUrl)
     .then(function (res) {
-      debugger;
+      //debugger;
       if (res.data.cod && res.data.message){  // additional error checking due to API data return
         throw new Error(res.data.message);
       } else {
