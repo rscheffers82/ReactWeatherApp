@@ -12,7 +12,7 @@ $(document).foundation();
 
 ReactDOM.render(
   <Router history={hashHistory}>
-    <Route path="/" component={Main}>                    // serup a route container
+    <Route path="/" component={Main}>                     // setup a route container
       <Route path="about" component={About}/>             // specify an about page
       <Route path="favorites" component={Favorites}/>     // specify a favorites page
       <IndexRoute component={Weather}/>                   // if none of the above can be found load Weather page (default page)

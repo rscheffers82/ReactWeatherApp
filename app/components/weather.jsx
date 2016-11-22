@@ -11,7 +11,12 @@ var Weather = React.createClass({
   },
   handleSearch: function (location) {
     var that = this;
-    that.setState({isLoading: true});
+    that.setState({
+      isLoading: true,
+      errorMessage: undefined,
+      temp: undefined,
+      location: undefined
+    });
 
     OpenWeatherMap.getTemp(location).then(function (temp){
       that.setState({
@@ -24,7 +29,21 @@ var Weather = React.createClass({
       alert(errorMessage);
     });
   },
-  render: function() {
+  componentDidMount: function (){
+    var location = this.props.location.query.location;
+    if ( location && location.length > 0 ){
+      this.handleSearch(location);
+      window.location.hash = '#/';
+    }
+  },
+  componentWillReceiveProps: function (newProps) {        // used to refresh the component when it's props change. E.g. needed to make the search work on the main page.
+    var location = newProps.location.query.location;
+    if ( location && location.length > 0 ){
+      this.handleSearch(location);
+      window.location.hash = '#/';
+    }
+  },
+  render: function () {
     var {isLoading, location, temp} = this.state;
 
     function renderMessage() {
