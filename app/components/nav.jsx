@@ -14,7 +14,11 @@ var Nav = React.createClass({
 
   },
   render: function(){
+    // future improvement, toggle menu bar on mobile
+    // Needs some js to work.
+    // http://foundation.zurb.com/sites/docs/responsive-navigation.html
     return(
+
       <div className="top-bar">
         <div className="top-bar-left">
           <ul className="menu">
@@ -45,6 +49,7 @@ var Nav = React.createClass({
           </form>
         </div>
       </div>
+
     );
   }
 });
