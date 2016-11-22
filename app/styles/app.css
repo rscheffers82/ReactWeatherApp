@@ -7,3 +7,7 @@ body{
   height: 20px;
   width: 20px;
 }
+
+.page-title {
+  margin: 2.5rem 0;
+}
