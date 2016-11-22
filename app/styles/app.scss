@@ -1,3 +1,6 @@
+$space-large: 2.5rem 0;
+$title-color: #555;
+
 body{
   font-family: Arial,"Times New Roman";
   font-size: 14px;
@@ -9,7 +12,8 @@ body{
 }
 
 .page-title {
-  margin: 2.5rem 0;
+  margin: $space-large;
+  color: $title-color;
 }
 
 input[type=search] {
