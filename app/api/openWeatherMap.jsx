@@ -7,16 +7,14 @@ module.exports = {
     var encodedLocation = encodeURIComponent(location);
     var requestUrl = `${WEATHER_URL}&q=${encodedLocation}`;
 
-    return axios.get(requestUrl)
-    .then(function (res) {
-      //debugger;
+    return axios.get(requestUrl).then(function (res) {
       if (res.data.cod && res.data.message){  // additional error checking due to API data return
         throw new Error(res.data.message);
       } else {
         return res.data.main.temp;            // return the temp
       }
     }, function (res) {                       // promise is not fulfilled, error
-      throw new Error(res.data.message);
+      throw new Error(res.message);
     });
   }
 }
