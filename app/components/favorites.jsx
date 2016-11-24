@@ -1,6 +1,11 @@
 var React = require('react');
 var {Link} = require('react-router');
 
+// Store favorites in localstorage and make them add able to users
+// http://docs.railsbridge.org/javascript-to-do-list-with-react/javascript-to-do-list-with-react
+// or https://www.kirupa.com/react/simple_todo_app_react.htm
+
+
 var Favorites = (props) => {
   return(
     <div>
